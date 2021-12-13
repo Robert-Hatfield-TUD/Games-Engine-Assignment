@@ -38,6 +38,8 @@
   <ItemGroup>
      <Compile Include="Assets\rockPlace.cs" />
      <Compile Include="Assets\yeah.cs" />
+     <Compile Include="Assets\audioMain.cs" />
+     <Compile Include="Assets\audioSync.cs" />
      <None Include="Assets\terrainShader.shader" />
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
     <Reference Include="UnityEngine">
