@@ -26,14 +26,16 @@ public class yeah : MonoBehaviour
 
     void GenerateOffset()
     {
-        if(sets == 0) {
+        if (sets == 0)
+        {
 
             terrain_offset_x = Random.Range(0f, 250f);
             terrain_offset_y = Random.Range(0f, 250f);
             sets++;
         }
-        else {
-            terrain_offset_x = terrain_offset_x + 0.020f;
+        else
+        {
+            terrain_offset_x = terrain_offset_x - 0.020f;
         }
     }
 
@@ -58,7 +60,8 @@ public class yeah : MonoBehaviour
         return heights;
     }
 
-    float CalculateHeights(int x, int y){
+    float CalculateHeights(int x, int y)
+    {
         float xCoordinate = ((float)x / terrain_width) * terrain_scale + terrain_offset_x;
         float yCoordinate = ((float)y / terrain_height) * terrain_scale + terrain_offset_y;
         return Mathf.PerlinNoise(xCoordinate, yCoordinate);
