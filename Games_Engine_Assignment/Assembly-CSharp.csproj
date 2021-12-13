@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\yeah.cs" />
+     <Compile Include="Assets\rockPlace.cs" />
      <None Include="Assets\terrainShader.shader" />
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
     <Reference Include="UnityEngine">
