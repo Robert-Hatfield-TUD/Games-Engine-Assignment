@@ -21,7 +21,6 @@ public class yeah : MonoBehaviour
         GenerateOffset();
         Terrain terrain = GetComponent<Terrain>();
         terrain.terrainData = GenerateTerrain(terrain.terrainData);
-        Debug.Log(terrain_offset_x);
     }
 
     void GenerateOffset()

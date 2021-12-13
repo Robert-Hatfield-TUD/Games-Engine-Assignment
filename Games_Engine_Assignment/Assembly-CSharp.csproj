@@ -36,10 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\beeMove.cs" />
      <Compile Include="Assets\menuScreen.cs" />
      <Compile Include="Assets\rockPlace.cs" />
      <Compile Include="Assets\yeah.cs" />
-     <Compile Include="Assets\beeMove.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\terrainShader.shader" />
