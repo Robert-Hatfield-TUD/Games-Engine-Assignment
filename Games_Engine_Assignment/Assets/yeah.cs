@@ -10,7 +10,7 @@ public class yeah : MonoBehaviour
     public int terrain_depth = 10;
     public int terrain_width = 256;
     public int terrain_height = 256;
-    public float terrain_scale = 10f;
+    public float terrain_scale = 15f;
     public float terrain_offset_x = 10f;
     public float terrain_offset_y = 10f;
 
