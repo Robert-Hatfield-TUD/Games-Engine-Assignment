@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 280759810}
   - component: {fileID: 280759811}
   - component: {fileID: 280759812}
+  - component: {fileID: 280759813}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -363,6 +364,27 @@ MonoBehaviour:
   yLoc: 0
   xLoc: 0
   pFlow: {fileID: 0}
+  rando: 0
+--- !u!114 &280759813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280759806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d8baae2fbdb5b4abda94c58a74fe5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oFlower: {fileID: 4281135127239077835, guid: 07509e9b3d425f1488054b3713f81e68, type: 3}
+  maxX: 141
+  minX: 125
+  set: 0
+  zLoc: 0
+  yLoc: 0
+  xLoc: 0
+  oFlow: {fileID: 0}
   rando: 0
 --- !u!1 &955038625
 GameObject:
