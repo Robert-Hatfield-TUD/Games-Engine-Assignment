@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 280759807}
   - component: {fileID: 280759810}
   - component: {fileID: 280759811}
+  - component: {fileID: 280759812}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -334,10 +335,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bFlower: {fileID: 5262839482695405742, guid: cf9a4b98fbb6a094684d980edb188cd3, type: 3}
-  pFlower: {fileID: 9204834201971474176, guid: f012e03345ae8754ab733a61f9a91d9f, type: 3}
-  terra: {fileID: 280759806}
   maxX: 141
   minX: 125
+  set: 0
+  zLoc: 0
+  yLoc: 0
+  xLoc: 0
+  bFlow: {fileID: 0}
+  rando: 0
+--- !u!114 &280759812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280759806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0542a9ff42388e54bba18432bd84d6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pFlower: {fileID: 9204834201971474176, guid: f012e03345ae8754ab733a61f9a91d9f, type: 3}
+  maxX: 141
+  minX: 125
+  set: 0
+  zLoc: 0
+  yLoc: 0
+  xLoc: 0
+  pFlow: {fileID: 0}
+  rando: 0
 --- !u!1 &955038625
 GameObject:
   m_ObjectHideFlags: 0

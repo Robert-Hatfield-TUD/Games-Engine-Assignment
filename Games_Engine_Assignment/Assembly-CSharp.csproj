@@ -41,6 +41,7 @@
      <Compile Include="Assets\blueFlowGen.cs" />
      <Compile Include="Assets\rockPlace.cs" />
      <Compile Include="Assets\yeah.cs" />
+     <Compile Include="Assets\purpFlowGen.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\terrainShader.shader" />
