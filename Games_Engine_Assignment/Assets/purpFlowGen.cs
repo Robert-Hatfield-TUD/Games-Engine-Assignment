@@ -17,7 +17,6 @@ public class purpFlowGen : MonoBehaviour
 
     void Start()
     {
-        //Debug.Log("Flower started");
         insPurpFlower();
     }
 
@@ -63,7 +62,7 @@ public class purpFlowGen : MonoBehaviour
         }
         else
         {
-            //Debug.Log("Flower disabled");
+            Destroy(pFlow);
             set = 0;
             StartCoroutine(flowerSpawn());
         }
@@ -72,10 +71,7 @@ public class purpFlowGen : MonoBehaviour
     IEnumerator flowerSpawn()
     {
         yield return new WaitForSecondsRealtime(3);
-        //Debug.Log("Flower ready for spawn");
         insPurpFlower();
     }
 
-    //} 243.14 z
-    // 11.42 y
 }

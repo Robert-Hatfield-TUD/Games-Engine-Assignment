@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class beeMove : MonoBehaviour
 {
@@ -8,9 +9,10 @@ public class beeMove : MonoBehaviour
     Vector3 mVec;
     public int score = 0;
     public int scoreTemp = 0;
+    public int scoreStart = 0;
     public GameObject Name;
     public GameObject Scores;
-    public blueFlowGen flowGenB;
+    public Text scoreSet;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,11 @@ public class beeMove : MonoBehaviour
             transform.localPosition = mVec;
         }
 
+        if (Input.GetKeyDown("space"))
+        {
+            scoreSet.text = "Score: 0";
+        }
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -54,9 +61,6 @@ public class beeMove : MonoBehaviour
         {
             Name = GameObject.Find("blueFlowerR(Clone)");
             Name.SetActive(false);
-            //Destroy(Name);
-            //flowGenB = GameObject.FindGameObjectWithTag("TagA").GetComponent<blueFlowGen>();
-            //flowGenB.insBlueFlower();
             score = score + 1;
         }
         if (other.gameObject.name == "purpleFlowerR(Clone)")
@@ -72,9 +76,10 @@ public class beeMove : MonoBehaviour
             score = score + 1;
         }
 
+
         Debug.Log(score);
 
-
+        scoreSet.text = "Score: " + score;
     }
 
 }

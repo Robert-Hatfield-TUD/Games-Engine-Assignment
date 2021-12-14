@@ -62,6 +62,7 @@ public class oranFlowGen : MonoBehaviour
         }
         else
         {
+            Destroy(oFlow);
             set = 0;
             StartCoroutine(flowerSpawn());
         }
