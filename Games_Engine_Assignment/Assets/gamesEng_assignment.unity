@@ -1004,7 +1004,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  scoreTemp: 0
   Name: {fileID: 0}
+  Scores: {fileID: 1456801069}
 --- !u!65 &1544770345
 BoxCollider:
   m_ObjectHideFlags: 0

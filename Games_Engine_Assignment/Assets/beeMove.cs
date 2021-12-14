@@ -7,7 +7,9 @@ public class beeMove : MonoBehaviour
 
     Vector3 mVec;
     public int score = 0;
+    public int scoreTemp = 0;
     public GameObject Name;
+    public GameObject Scores;
 
     // Start is called before the first frame update
     void Start()
@@ -67,11 +69,8 @@ public class beeMove : MonoBehaviour
         }
 
         Debug.Log(score);
+
+
     }
 
-    IEnumerator flowGet()
-    {
-        yield return new WaitForSeconds(2);
-        score = score + 1;
-    }
 }
