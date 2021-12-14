@@ -11,54 +11,66 @@ public class blueFlowGen : MonoBehaviour
     public int minX = 125;
     public int set = 0;
     public float zLoc;
+    public float yLoc;
+    public float xLoc;
     public GameObject bFlow;
-    // Start is called before the first frame update
+
+    public float rando;
+
     void Start()
     {
-        //GameObject bFlow = Instantiate(bFlower);
-        //bFlow.transform.parent = transform;
-        //bFlow.transform.localPosition = new Vector3(135, 17, 213);
-        //bFlow.transform.rotation = Quaternion.Euler(-90, 0, 0);
-        //var bFlowerG = Instantiate(bFlower, new Vector3(135, 11, 213), Quaternion.identity);
         Debug.Log("Flower started");
-
-        //StartCoroutine(moveBack(bFlow));
-        //bFlowerG.transform.parent = terra.transform;
+        insBlueFlower();
     }
 
-    // Update is called once per frame
     void Update()
+    {
+        desBlueFlower();
+    }
+
+    public void insBlueFlower()
     {
         if (set <= 0)
         {
+
+            rando = Random.Range(minX, maxX);
+            //Debug.Log("Random: " + rando);
             bFlow = Instantiate(bFlower);
             bFlow.transform.parent = transform;
-            bFlow.transform.localPosition = new Vector3(135, 10, 170);
+            bFlow.transform.localPosition = new Vector3(rando, 13, 170);
             bFlow.transform.rotation = Quaternion.Euler(-90, 0, 0);
             set++;
         }
-        //bFlow.transform.position.z = bFlow.transform.position.x - 0.020f;
-        StartCoroutine(moveBack(bFlow));
     }
 
-    IEnumerator moveBack(GameObject gObj)
+    public void desBlueFlower()
     {
-        zLoc = gObj.transform.position.z;
-        if (gObj.transform.position.z < 247)
+        if (bFlow.active)
         {
+            zLoc = bFlow.transform.position.z;
+            yLoc = bFlow.transform.position.y;
+            xLoc = bFlow.transform.localPosition.x;
 
-            zLoc = zLoc + 0.28f;
+            //Debug.Log("y: " + yLoc);
+            //Debug.Log("x: " + xLoc);
 
-            gObj.transform.localPosition = new Vector3(135, 17, zLoc);
-            Debug.Log(gObj.transform.position.z);
+            if (bFlow.transform.position.z < 247)
+            {
+
+                zLoc = zLoc + 0.28f;
+
+                bFlow.transform.localPosition = new Vector3(xLoc, yLoc, zLoc);
+                //Debug.Log(bFlow.transform.position.z);
+            }
+            else
+            {
+                bFlow.SetActive(false);
+            }
         }
         else
         {
-            Destroy(gObj);
-            //insFlower();
+            Debug.Log("Flower disabled");
         }
-        yield return new WaitForSeconds(0);
-
     }
 
     //} 243.14 z
