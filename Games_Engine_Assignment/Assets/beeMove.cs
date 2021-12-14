@@ -6,6 +6,7 @@ public class beeMove : MonoBehaviour
 {
 
     Vector3 mVec;
+    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -40,16 +41,18 @@ public class beeMove : MonoBehaviour
             transform.localPosition = mVec;
         }
 
-        //243.14
-        //transform.Translate(0, 0, Input.GetAxis("Horizontal") * speed * Time.deltaTime);
+    }
 
-        //if (Input.GetKeyDown(KeyCode.LeftArrow))
-        //{
-        //this.transform.Rotate(Vector3.up, -10);
-        //}
-        //if (Input.GetKeyDown(KeyCode.RightArrow))
-        //{
-        //this.transform.Rotate(Vector3.up, 10);
-        //}
+    void OnTriggerEnter(Collider other)
+    {
+        //score = score + 1;
+        Debug.Log(" trig score: " + score);
+        StartCoroutine(flowGet());
+    }
+
+    IEnumerator flowGet()
+    {
+        yield return new WaitForSeconds(2);
+        score = score + 1;
     }
 }

@@ -76,6 +76,16 @@ public class blueFlowGen : MonoBehaviour
         insBlueFlower();
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        //score = score + 1;
+        //Debug.Log(" trig score: " + score);
+        //StartCoroutine(flowGet());
+
+        bFlow.SetActive(false);
+        //set = 0;
+    }
+
     //} 243.14 z
     // 11.42 y
 }
