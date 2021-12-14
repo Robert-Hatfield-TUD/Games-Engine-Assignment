@@ -76,13 +76,16 @@ public class blueFlowGen : MonoBehaviour
         insBlueFlower();
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider col)
     {
+        //Debug.Log(col.gameObject.name);
         //score = score + 1;
-        //Debug.Log(" trig score: " + score);
+        if (col.gameObject.name == "Bee")
+        {
+            Debug.Log("DEAD");
+        }
         //StartCoroutine(flowGet());
-
-        bFlow.SetActive(false);
+        //bFlow.SetActive(false);
         //set = 0;
     }
 

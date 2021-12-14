@@ -7,6 +7,7 @@ public class beeMove : MonoBehaviour
 
     Vector3 mVec;
     public int score = 0;
+    public GameObject Name;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +47,15 @@ public class beeMove : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         //score = score + 1;
-        Debug.Log(" trig score: " + score);
+        //Debug.Log(" trig score: " + score);
+        //Debug.Log(other.gameObject.name);
+
+        if (other.gameObject.name == "blueFlowerR(Clone)")
+        {
+            Name = GameObject.Find("blueFlowerR(Clone)");
+            Name.SetActive(false);
+            Debug.Log("Flower is kill");
+        }
         StartCoroutine(flowGet());
     }
 
