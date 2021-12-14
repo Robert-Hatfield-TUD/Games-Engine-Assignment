@@ -9,8 +9,8 @@ public class startGameScript : MonoBehaviour
     void Start()
     {
         audioS = GetComponent<AudioSource>();
-        AudioSource.volume = 0.5f;
         audioS.Play();
+        audioS.volume = 0.5f;
     }
 
     // Update is called once per frame

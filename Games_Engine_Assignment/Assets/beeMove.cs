@@ -10,6 +10,7 @@ public class beeMove : MonoBehaviour
     public int scoreTemp = 0;
     public GameObject Name;
     public GameObject Scores;
+    public blueFlowGen flowGenB;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +54,9 @@ public class beeMove : MonoBehaviour
         {
             Name = GameObject.Find("blueFlowerR(Clone)");
             Name.SetActive(false);
+            //Destroy(Name);
+            //flowGenB = GameObject.FindGameObjectWithTag("TagA").GetComponent<blueFlowGen>();
+            //flowGenB.insBlueFlower();
             score = score + 1;
         }
         if (other.gameObject.name == "purpleFlowerR(Clone)")

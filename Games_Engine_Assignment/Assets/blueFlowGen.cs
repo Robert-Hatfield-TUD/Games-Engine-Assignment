@@ -64,6 +64,7 @@ public class blueFlowGen : MonoBehaviour
         else
         {
             //Debug.Log("Flower disabled");
+            Destroy(bFlow);
             set = 0;
             StartCoroutine(flowerSpawn());
         }
