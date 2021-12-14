@@ -17,7 +17,7 @@ public class blueFlowGen : MonoBehaviour
 
     void Start()
     {
-        //Debug.Log("Flower started");
+        bFlow = Instantiate(bFlower);
         insBlueFlower();
     }
 
@@ -30,9 +30,9 @@ public class blueFlowGen : MonoBehaviour
     {
         if (set <= 0)
         {
-
+            bFlow.SetActive(true);
             rando = Random.Range(minX, maxX);
-            bFlow = Instantiate(bFlower);
+            //bFlow = Instantiate(bFlower);
             bFlow.transform.parent = transform;
             bFlow.transform.localPosition = new Vector3(rando, 13, 170);
             bFlow.transform.rotation = Quaternion.Euler(-90, 0, 0);
@@ -51,7 +51,7 @@ public class blueFlowGen : MonoBehaviour
             if (bFlow.transform.position.z < 247)
             {
 
-                zLoc = zLoc + 0.288f;
+                zLoc = zLoc + 0.29f;
 
                 bFlow.transform.localPosition = new Vector3(xLoc, yLoc, zLoc);
 
@@ -64,7 +64,7 @@ public class blueFlowGen : MonoBehaviour
         else
         {
             //Debug.Log("Flower disabled");
-            Destroy(bFlow);
+            //Destroy(bFlow);
             set = 0;
             StartCoroutine(flowerSpawn());
         }
@@ -72,24 +72,11 @@ public class blueFlowGen : MonoBehaviour
 
     IEnumerator flowerSpawn()
     {
+
         yield return new WaitForSecondsRealtime(1);
         //Debug.Log("Flower ready for spawn");
+        //Destroy(bFlow);
         insBlueFlower();
     }
 
-    void OnTriggerEnter(Collider col)
-    {
-        //Debug.Log(col.gameObject.name);
-        //score = score + 1;
-        if (col.gameObject.name == "Bee")
-        {
-            Debug.Log("DEAD");
-        }
-        //StartCoroutine(flowGet());
-        //bFlow.SetActive(false);
-        //set = 0;
-    }
-
-    //} 243.14 z
-    // 11.42 y
 }

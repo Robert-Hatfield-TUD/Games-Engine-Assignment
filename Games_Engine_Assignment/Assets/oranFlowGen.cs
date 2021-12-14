@@ -17,6 +17,7 @@ public class oranFlowGen : MonoBehaviour
 
     void Start()
     {
+        oFlow = Instantiate(oFlower);
         insOranFlower();
     }
 
@@ -29,9 +30,9 @@ public class oranFlowGen : MonoBehaviour
     {
         if (set <= 0)
         {
-
+            oFlow.SetActive(true);
             rando = Random.Range(minX, maxX);
-            oFlow = Instantiate(oFlower);
+            //oFlow = Instantiate(oFlower);
             oFlow.transform.parent = transform;
             oFlow.transform.localPosition = new Vector3(rando, 13, 170);
             oFlow.transform.rotation = Quaternion.Euler(-90, 0, 0);
@@ -50,7 +51,7 @@ public class oranFlowGen : MonoBehaviour
             if (oFlow.transform.position.z < 247)
             {
 
-                zLoc = zLoc + 0.288f;
+                zLoc = zLoc + 0.29f;
 
                 oFlow.transform.localPosition = new Vector3(xLoc, yLoc, zLoc);
 
@@ -62,7 +63,6 @@ public class oranFlowGen : MonoBehaviour
         }
         else
         {
-            Destroy(oFlow);
             set = 0;
             StartCoroutine(flowerSpawn());
         }

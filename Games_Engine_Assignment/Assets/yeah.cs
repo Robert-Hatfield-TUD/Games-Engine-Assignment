@@ -66,4 +66,3 @@ public class yeah : MonoBehaviour
         return Mathf.PerlinNoise(xCoordinate, yCoordinate);
     }
 }
-

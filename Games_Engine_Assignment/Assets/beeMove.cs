@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class beeMove : MonoBehaviour
 {
@@ -13,14 +14,13 @@ public class beeMove : MonoBehaviour
     public GameObject Name;
     public GameObject Scores;
     public Text scoreSet;
+    public AudioSource polGet;
 
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         mVec = transform.localPosition;
@@ -46,40 +46,54 @@ public class beeMove : MonoBehaviour
             mVec.x = mVec.x + 0.09f;
             transform.localPosition = mVec;
         }
-
-        if (Input.GetKeyDown("space"))
-        {
-            scoreSet.text = "Score: 0";
-        }
-
     }
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
+
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            Scores.SetActive(true);
+        }
 
         if (other.gameObject.name == "blueFlowerR(Clone)")
         {
             Name = GameObject.Find("blueFlowerR(Clone)");
             Name.SetActive(false);
             score = score + 1;
+
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                polGet.volume = 0.1f;
+                polGet.Play();
+            }
         }
         if (other.gameObject.name == "purpleFlowerR(Clone)")
         {
             Name = GameObject.Find("purpleFlowerR(Clone)");
             Name.SetActive(false);
             score = score + 1;
+
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                polGet.volume = 0.1f;
+                polGet.Play();
+            }
         }
         if (other.gameObject.name == "orangeFlowerR(Clone)")
         {
             Name = GameObject.Find("orangeFlowerR(Clone)");
             Name.SetActive(false);
             score = score + 1;
+
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                polGet.volume = 0.1f;
+                polGet.Play();
+            }
         }
-
-
-        Debug.Log(score);
 
         scoreSet.text = "Score: " + score;
     }
-
 }

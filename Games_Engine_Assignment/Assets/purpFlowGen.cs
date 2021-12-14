@@ -17,6 +17,7 @@ public class purpFlowGen : MonoBehaviour
 
     void Start()
     {
+        pFlow = Instantiate(pFlower);
         insPurpFlower();
     }
 
@@ -29,9 +30,9 @@ public class purpFlowGen : MonoBehaviour
     {
         if (set <= 0)
         {
-
+            pFlow.SetActive(true);
             rando = Random.Range(minX, maxX);
-            pFlow = Instantiate(pFlower);
+            //pFlow = Instantiate(pFlower);
             pFlow.transform.parent = transform;
             pFlow.transform.localPosition = new Vector3(rando, 13, 170);
             pFlow.transform.rotation = Quaternion.Euler(-90, 0, 0);
@@ -50,7 +51,7 @@ public class purpFlowGen : MonoBehaviour
             if (pFlow.transform.position.z < 247)
             {
 
-                zLoc = zLoc + 0.288f;
+                zLoc = zLoc + 0.29f;
 
                 pFlow.transform.localPosition = new Vector3(xLoc, yLoc, zLoc);
 
@@ -62,7 +63,7 @@ public class purpFlowGen : MonoBehaviour
         }
         else
         {
-            Destroy(pFlow);
+            //Destroy(pFlow);
             set = 0;
             StartCoroutine(flowerSpawn());
         }
