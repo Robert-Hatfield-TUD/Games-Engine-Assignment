@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3468463424608433521}
   - component: {fileID: 544283058685573844}
   - component: {fileID: 2335496593138486814}
-  - component: {fileID: 5530252136237792411}
+  - component: {fileID: 7044921040536700324}
   m_Layer: 0
   m_Name: orangeFlowerR
   m_TagString: Untagged
@@ -83,8 +83,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5530252136237792411
-MeshCollider:
+--- !u!65 &7044921040536700324
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,8 +92,7 @@ MeshCollider:
   m_GameObject: {fileID: 4281135127239077835}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8314571269056883277, guid: 5675fd11b3a4fda4cb3944e2831e4918, type: 3}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16326207, y: 0.16326186, z: 0.14198926}
+  m_Center: {x: 0.00000010058284, y: 0, z: -0.07099463}

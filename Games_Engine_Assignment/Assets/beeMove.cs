@@ -46,17 +46,27 @@ public class beeMove : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //score = score + 1;
-        //Debug.Log(" trig score: " + score);
-        //Debug.Log(other.gameObject.name);
 
         if (other.gameObject.name == "blueFlowerR(Clone)")
         {
             Name = GameObject.Find("blueFlowerR(Clone)");
             Name.SetActive(false);
-            Debug.Log("Flower is kill");
+            score = score + 1;
         }
-        StartCoroutine(flowGet());
+        if (other.gameObject.name == "purpleFlowerR(Clone)")
+        {
+            Name = GameObject.Find("purpleFlowerR(Clone)");
+            Name.SetActive(false);
+            score = score + 1;
+        }
+        if (other.gameObject.name == "orangeFlowerR(Clone)")
+        {
+            Name = GameObject.Find("orangeFlowerR(Clone)");
+            Name.SetActive(false);
+            score = score + 1;
+        }
+
+        Debug.Log(score);
     }
 
     IEnumerator flowGet()
