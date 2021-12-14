@@ -51,7 +51,7 @@ public class purpFlowGen : MonoBehaviour
             if (pFlow.transform.position.z < 247)
             {
 
-                zLoc = zLoc + 0.28f;
+                zLoc = zLoc + 0.288f;
 
                 pFlow.transform.localPosition = new Vector3(xLoc, yLoc, zLoc);
 

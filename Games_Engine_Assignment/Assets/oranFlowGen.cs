@@ -50,7 +50,7 @@ public class oranFlowGen : MonoBehaviour
             if (oFlow.transform.position.z < 247)
             {
 
-                zLoc = zLoc + 0.28f;
+                zLoc = zLoc + 0.288f;
 
                 oFlow.transform.localPosition = new Vector3(xLoc, yLoc, zLoc);
 
