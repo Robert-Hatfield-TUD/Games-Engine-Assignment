@@ -42,7 +42,7 @@ public class TerrainGen : MonoBehaviour
         }
         else
         {
-            // Changing the offset just slightly
+            // Changing the offset continously
             terrain_offset_x = terrain_offset_x - 0.020f;
         }
     }
