@@ -28,13 +28,25 @@ The Main Menu has two options which are placed below the title "PLAY" and "EXIT"
 
 Below is the code for the Main Menu to allow for the buttons to work as intended.
 
-![image](MainMenuSC.png)
+![image](screenshots/MainMenuSC.png)
 
 The next image shows the Main Menu as it is in the unity editor with use of TextMeshPro, honeycomb image, bee image and a material called sunshine gradient to give it the appearance of a colour gradient.
 
-![image](MainMenuSCUnityEditor.png)
+![image](screenshots/MainMenuSCUnityEditor.png)
 
 The next scene is the main game in which the first part to go over is the terrain itself and how it is generated. The terrain uses one script to generate procedurally which is based of the same script done in the module with a modification which makes it so that the terrain has its offest changed to make it appear as though the player is moving forward however th player is stationary. The script used to generate the terrain is also based of perlin nosie. Below is a snippet of the code where the offset is changed.
+
+![image](screenshots/offsetChange.png)
+
+Below is a screenshot of the terrain after it has been generated.
+
+![image](screenshots/terrainSC.png)
+
+Next to disscus is the bee which is the player and is made up of a capsule, two cubes and two spheres with a box collider surrounding it instead of a mesh renderer to save a small amount of processing power. The bee is also covered in a material created from a sprite photo which acts as a shader to mimic the colours of a bee. Below is a screenshot of teh materials including the material used for the bee body which is called bStripes.
+
+![image](screenshots/materials.png)
+
+Besides the materials the bee is controlled by a single script which is called beeMove. This script allows for the bee to move side to side within a certain range using the left and right arrow keys which are preset in most versions in unity.
 
 
 
