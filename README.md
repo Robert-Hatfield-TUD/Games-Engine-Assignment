@@ -76,21 +76,76 @@ Lastly after the bee covering both audio and score are the flowers used in the g
 
 ![image](screenshots/flowerGenerationScript.png)
 
-This script contains two function called insBlueFlower and desBlueFlower, the first sets the object as enabled and then chooses a random number on the x axis within range of the player to spawn at and increments the set variable to ensure that there is only one flower of a type at a time. The next function desBlueFlower handles the movement of the flower to move towards the player in as close to the offset of the terrain as possible, it does this until the flower passes the player and then disables the flower object which causes the if statement to call upon the coroutine flowerSpawn. It only calls the coroutine as long as it is below its point threshold which for the blue flower is 65, the orange flower is 35 and the purple flower is 15. Similar to the point threshold each flower has a wait timer in the coroutine before they are placed in the game once again, the blue flower waits 1 second, the orange flower waits 2 seconds and the purple flower waits 3 seconds. Lastly for the flower each flower has a mesh collider as they have a more complicated design and at the cost of a heavier load the mesh collider adds a more defined area for the player to hit as a box colider made it too easy to hit the flower.
+This script contains two function called insBlueFlower and desBlueFlower, the first sets the object as enabled and then chooses a random number on the x axis within range of the player to spawn at and increments the set variable to ensure that there is only one flower of a type at a time. The next function desBlueFlower handles the movement of the flower to move towards the player in as close to the offset of the terrain as possible, it does this until the flower passes the player and then disables the flower object which causes the if statement to call upon the coroutine flowerSpawn. It only calls the coroutine as long as it is below its point threshold which for the blue flower is 65, the orange flower is 35 and the purple flower is 15. Similar to the point threshold each flower has a wait timer in the coroutine before they are placed in the game once again, the blue flower waits 1 second, the orange flower waits 2 seconds and the purple flower waits 3 seconds. Lastly for the flower each flower has a mesh collider as they have a more complicated design and at the cost of a heavier load the mesh collider adds a more defined area for the player to hit as a box colider made it too easy to hit the flower. Below is a screenshot of the mesh collider on one of the flowers.
+
+![image](screenshots/flowerCollider.png)
+
+To note the skybox was imported from the asset store and the images on the Main Menu were also taken from sources online.
+
+# List of Classes/Assets in the Project and whether they were made yourself or modified or if they are from a Source, with References.
+| Scripts and Assets | Source |
+| ------------- | ------------- |
+| MenuScreen.cs | Brackeys tutorial |
+| TerrainGen.cs | Followed program from lecture and modified it |
+| beeMove.cs | Self written |
+| startGameScript.cs | Self Written |
+| blueFlowGen.cs | Self written |
+| oranFlowGen.cs | Self written |
+| purpFlowGen.cs | Self written |
+| bee-trail-no BG | Acquired online |
+| BG | Self made |
+| blueFlower | Self made |
+| blueFlowerR | Self made |
+| bee-seamless | Acquired online |
+| eye | Self made |
+| honeycomb-no BG | Acquired online |
+| My-love-piano Loop.wav | Acquired online |
+| New Terrain | Unity constructed |
+| orangeFlower | Self made |
+| orangeFlowerR | Self made |
+| Pollen-get | Acquired online |
+| purpleFlower | Self made |
+| purpleFlowerR | Self made |
+| Skybox | Downloaded asset |
+| sunshineGradient | Self made |
+| terrainShader | Self made |
+| bStripes | Self made |
+| All flower materials | Self made |
 
 
+# References
 
+https://assetstore.unity.com/ - asset store
 
+https://www.youtube.com/watch?v=zc8ac_qUXQY - Menu
 
+https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633 - skybox
 
+https://freesound.org/people/ShadyDave/sounds/325611/ - Audios
 
+https://github.com/skooter500/GE1-2021-2022 - Terrain Generation
 
+https://www.shutterstock.com/search/bee+stripe+pattern - Bee strip sprite
 
+https://www.clipartkey.com/view/hJTRhw_bee-with-trail-clipart/ - bee with trail
 
+https://www.shutterstock.com/search/honeycomb+cartoon - Honeycomb
 
+# What I am most proud of in the Assignment
+For this project I am quite happy with the handling of resources through the reuse of objects for th flowers which is highly important especially for computers that lack the hardware to run heavy load programs. The other aspect I am quite proud of is the models of the flowers I had created which were done in Blender. I had no prior knowledge of Blender and it gave me an opportunity to start from scratch and learn for myself how to use the application. 
 
+# Changes I would make
 
+If I am to continue this project instead of a moving terrain I would like to create an area where the player will have full range to move in a 3D enviroment where there are other animals they have to compete with.
 
+#Previous proposal:
 
+Name: Robert Hatfield
 
+Student Number: C18475892
 
+Class Group: TU857
+
+For teh assignment I want to create a procedurally generated landscape in which the player will be placed to then collect objects that will be coming towards it. The objects or player will be a 3D model created in Blender that will have a more complex design.
+
+The player will be able to move to come into contact with the objects and collect them for points as they spawn using coroutines.
