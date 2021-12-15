@@ -138,7 +138,7 @@ For this project I am quite happy with the handling of resources through the reu
 
 If I am to continue this project instead of a moving terrain I would like to create an area where the player will have full range to move in a 3D enviroment where there are other animals they have to compete with.
 
-#Previous proposal:
+# Previous proposal:
 
 Name: Robert Hatfield
 
