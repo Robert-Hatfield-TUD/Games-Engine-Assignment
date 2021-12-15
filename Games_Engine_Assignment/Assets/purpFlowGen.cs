@@ -53,6 +53,7 @@ public class purpFlowGen : MonoBehaviour
     // The function to move the flower and disables it if it passes the player
     public void desPurpFlower()
     {
+        // If to check if it is enabled and then move is or disable it if need be
         if (pFlow.active)
         {
             zLoc = pFlow.transform.position.z;
@@ -72,6 +73,7 @@ public class purpFlowGen : MonoBehaviour
                 pFlow.SetActive(false);
             }
         }
+        // Else which will only spawn the flower if the score is below 15 points
         else
         {
             if (score.score < 15)
@@ -82,6 +84,7 @@ public class purpFlowGen : MonoBehaviour
         }
     }
 
+    // Coroutine which uses a timer to spawn the flower a specific time after it has been disabled
     IEnumerator flowerSpawn()
     {
         yield return new WaitForSecondsRealtime(3);
