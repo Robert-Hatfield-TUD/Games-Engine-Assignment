@@ -1,9 +1,16 @@
+/*
+
+This is the script to check if the object for the flower is enabled and then to change its position if has been disabled
+
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class blueFlowGen : MonoBehaviour
 {
+    // Setting variables/objects
     public GameObject bFlower;
     public int maxX = 141;
     public int minX = 125;
@@ -14,6 +21,7 @@ public class blueFlowGen : MonoBehaviour
     public GameObject bFlow;
 
     public float rando;
+    public beeMove score;
 
     void Start()
     {
@@ -32,7 +40,6 @@ public class blueFlowGen : MonoBehaviour
         {
             bFlow.SetActive(true);
             rando = Random.Range(minX, maxX);
-            //bFlow = Instantiate(bFlower);
             bFlow.transform.parent = transform;
             bFlow.transform.localPosition = new Vector3(rando, 13, 170);
             bFlow.transform.rotation = Quaternion.Euler(-90, 0, 0);
@@ -50,11 +57,8 @@ public class blueFlowGen : MonoBehaviour
 
             if (bFlow.transform.position.z < 247)
             {
-
-                zLoc = zLoc + 0.29f;
-
+                zLoc = zLoc + 0.3f;
                 bFlow.transform.localPosition = new Vector3(xLoc, yLoc, zLoc);
-
             }
             else
             {
@@ -63,20 +67,17 @@ public class blueFlowGen : MonoBehaviour
         }
         else
         {
-            //Debug.Log("Flower disabled");
-            //Destroy(bFlow);
-            set = 0;
-            StartCoroutine(flowerSpawn());
+            if (score.score < 65)
+            {
+                set = 0;
+                StartCoroutine(flowerSpawn());
+            }
         }
     }
 
     IEnumerator flowerSpawn()
     {
-
         yield return new WaitForSecondsRealtime(1);
-        //Debug.Log("Flower ready for spawn");
-        //Destroy(bFlow);
         insBlueFlower();
     }
-
 }

@@ -14,6 +14,7 @@ public class oranFlowGen : MonoBehaviour
     public GameObject oFlow;
 
     public float rando;
+    public beeMove score;
 
     void Start()
     {
@@ -32,7 +33,6 @@ public class oranFlowGen : MonoBehaviour
         {
             oFlow.SetActive(true);
             rando = Random.Range(minX, maxX);
-            //oFlow = Instantiate(oFlower);
             oFlow.transform.parent = transform;
             oFlow.transform.localPosition = new Vector3(rando, 13, 170);
             oFlow.transform.rotation = Quaternion.Euler(-90, 0, 0);
@@ -51,7 +51,7 @@ public class oranFlowGen : MonoBehaviour
             if (oFlow.transform.position.z < 247)
             {
 
-                zLoc = zLoc + 0.29f;
+                zLoc = zLoc + 0.3f;
 
                 oFlow.transform.localPosition = new Vector3(xLoc, yLoc, zLoc);
 
@@ -63,8 +63,11 @@ public class oranFlowGen : MonoBehaviour
         }
         else
         {
-            set = 0;
-            StartCoroutine(flowerSpawn());
+            if (score.score < 35)
+            {
+                set = 0;
+                StartCoroutine(flowerSpawn());
+            }
         }
     }
 

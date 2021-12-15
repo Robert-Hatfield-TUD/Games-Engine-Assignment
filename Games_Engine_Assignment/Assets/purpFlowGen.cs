@@ -14,6 +14,7 @@ public class purpFlowGen : MonoBehaviour
     public GameObject pFlow;
 
     public float rando;
+    public beeMove score;
 
     void Start()
     {
@@ -32,7 +33,6 @@ public class purpFlowGen : MonoBehaviour
         {
             pFlow.SetActive(true);
             rando = Random.Range(minX, maxX);
-            //pFlow = Instantiate(pFlower);
             pFlow.transform.parent = transform;
             pFlow.transform.localPosition = new Vector3(rando, 13, 170);
             pFlow.transform.rotation = Quaternion.Euler(-90, 0, 0);
@@ -51,7 +51,7 @@ public class purpFlowGen : MonoBehaviour
             if (pFlow.transform.position.z < 247)
             {
 
-                zLoc = zLoc + 0.29f;
+                zLoc = zLoc + 0.3f;
 
                 pFlow.transform.localPosition = new Vector3(xLoc, yLoc, zLoc);
 
@@ -63,9 +63,11 @@ public class purpFlowGen : MonoBehaviour
         }
         else
         {
-            //Destroy(pFlow);
-            set = 0;
-            StartCoroutine(flowerSpawn());
+            if (score.score < 15)
+            {
+                set = 0;
+                StartCoroutine(flowerSpawn());
+            }
         }
     }
 
