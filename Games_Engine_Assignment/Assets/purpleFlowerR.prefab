@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8427909748431545786}
   - component: {fileID: 4853236448643475999}
   - component: {fileID: 7259485526821936853}
-  - component: {fileID: 387892364918134898}
+  - component: {fileID: -279066337270738950}
   m_Layer: 0
   m_Name: purpleFlowerR
   m_TagString: Untagged
@@ -83,8 +83,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &387892364918134898
-BoxCollider:
+--- !u!64 &-279066337270738950
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,6 +93,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.16326207, y: 0.16326186, z: 0.14198926}
-  m_Center: {x: 0.00000010058284, y: 0, z: -0.07099463}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1198743231517016826, guid: 7b4c77570be65084fbffe27f1d29b02f, type: 3}
