@@ -27,3 +27,28 @@ The first section to explain is the main menu which is the first thing to see wh
 The Main Menu has two options which are placed below the title "PLAY" and "EXIT". The Main Menu UI is created using a canvas and then adding a panel object to the canvas which will allow for a background to be added. An empty object is then added to the canvas so that the buttons can be grouped up for a cleaner look and so that a single script can be added to the object to control both buttons.
 
 Below is the code for the Main Menu to allow for the buttons to work as intended.
+
+![image](MainMenuSC.png)
+
+The next image shows the Main Menu as it is in the unity editor with use of TextMeshPro, honeycomb image, bee image and a material called sunshine gradient to give it the appearance of a colour gradient.
+
+![image](MainMenuSCUnityEditor.png)
+
+The next scene is the main game in which the first part to go over is the terrain itself and how it is generated. The terrain uses one script to generate procedurally which is based of the same script done in the module with a modification which makes it so that the terrain has its offest changed to make it appear as though the player is moving forward however th player is stationary. The script used to generate the terrain is also based of perlin nosie. Below is a snippet of the code where the offset is changed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
