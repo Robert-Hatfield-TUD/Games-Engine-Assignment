@@ -42,11 +42,41 @@ Below is a screenshot of the terrain after it has been generated.
 
 ![image](screenshots/terrainSC.png)
 
-Next to disscus is the bee which is the player and is made up of a capsule, two cubes and two spheres with a box collider surrounding it instead of a mesh renderer to save a small amount of processing power. The bee is also covered in a material created from a sprite photo which acts as a shader to mimic the colours of a bee. Below is a screenshot of teh materials including the material used for the bee body which is called bStripes.
+Lastly for the terrain the startGameScript.cs is a script attached to the terrain to begin playing the game song which is the song My love(piano loop) seen here https://freesound.org/people/ShadyDave/sounds/325611/. Below is a screenshot of teh above mentioned c# file.
+
+![image](screenshots/startGameScript.png)
+
+Next to disscus is the bee which is the player and is made up of a capsule, two cubes and two spheres with a box collider surrounding it instead of a mesh renderer to save a small amount of processing power. The bee is also covered in a material created from a sprite photo which acts as a shader to mimic the colours of a bee. Below is a screenshot of the materials including the material used for the bee body which is called bStripes and a screenshot of the makeup of the bee object.
 
 ![image](screenshots/materials.png)
 
-Besides the materials the bee is controlled by a single script which is called beeMove. This script allows for the bee to move side to side within a certain range using the left and right arrow keys which are preset in most versions in unity.
+![image](screenshots/beeContents.png)
+
+Besides the materials the bee is controlled by a single script which is called beeMove. This script allows for the bee to move side to side within a certain range using the left and right arrow keys which are preset in most versions in unity. The bee also handles the collision with the flowers as well as the score added after each collision. Below are two images firstly of the code for the bee movement and the second for the collision.
+
+![image](screenshots/beeCollider.png)
+
+![image](screenshots/beeMovement.png)
+
+As the bee collides with each flower it plays the audio polGet which is an edited sound created from the artist cameronmusic seen here https://freesound.org/people/cameronmusic/sounds/138410/ which is a website hosting many free sound samples. The collider also sets each flower object to be disabled which is then enabled again in the flower generation scripts and this is done to ensure that there is only ever three flower objects at a time one of each colour. This stops an infinte amount of them spawning to reduce load and below is a screenshot of the flowers created in blender with the original flower acting as a host to create random colour duplicates.
+
+![image](screenshots/blenderSC.png)
+
+Lastly the bee handles the score gotten from each flower and changes the score display in the top left of the screen.
+
+![image](screenshots/scoreSC.png)
+
+This is done by having both the score object which is a text object and its text area mapped to the variables Scores and scoreSet in the beeMove.cs script. Lastly for the bee here is some screenshots of the front and back of the bee.
+
+![image](screenshots/beeFront.png)
+
+![image](screenshots/beeBack.png)
+
+Lastly after the bee covering both audio and score are the flowers used in the game. All three flowers have their own respective scripts which handle their positioning and spawn rate. The blue flower has the blueFlowGen.cs script, the orange flower has the oranFlowGen.cs script and the purple flower has the purpFloweGen.cs script. Below is the basic layout of the first blue flower generation script.
+
+![image](screenshots/flowerGenerationScript.png)
+
+This script contains two function called insBlueFlower and desBlueFlower, the first sets the object as enabled and then chooses a random number on the x axis within range of the player to spawn at and increments the set variable to ensure that there is only one flower of a type at a time. The next function desBlueFlower handles the movement of the flower to move towards the player in as close to the offset of the terrain as possible, it does this until the flower passes the player and then disables the flower object which causes the if statement to call upon the coroutine flowerSpawn. It only calls the coroutine as long as it is below its point threshold which for the blue flower is 65, the orange flower is 35 and the purple flower is 15. Similar to the point threshold each flower has a wait timer in the coroutine before they are placed in the game once again, the blue flower waits 1 second, the orange flower waits 2 seconds and the purple flower waits 3 seconds. Lastly for the flower each flower.  
 
 
 
