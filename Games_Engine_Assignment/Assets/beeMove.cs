@@ -61,6 +61,10 @@ public class beeMove : MonoBehaviour
         {
             Scores.SetActive(true);
         }
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     // OnTrigger function to check for collisions with the flowers in game 
